@@ -27,7 +27,7 @@
 //#include<iomanip>
 using namespace std;
 #define PB push_back
-#define Roro ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#define Soso ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define Skip continue
 
 
@@ -109,6 +109,15 @@ bool cmp(const int& a, const int& b) {
 //    |      |]	  NESCAFÉ
 //    \      /    Rashed Maaitah
 //     `----'
+
+
+//      ( (
+//    ( (
+//      ) )
+//    ........
+//    |      |]	  NESCAFÉ
+//    \      /    Salsabeel Musa
+//     `----'
 void solve() {
 
 	
@@ -121,7 +130,7 @@ void solve() {
 int main() {
 
 
-	Roro;
+	Soso;
 	int t = 1;
 	//cin >> t;
 	while (t--)
