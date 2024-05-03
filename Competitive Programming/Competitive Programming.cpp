@@ -1,5 +1,4 @@
 #include<iostream>
-//#include"SOSO.h"
 #include<vector>
 #include<string> // to_string() a function to convert to a num to a string !!
 #include<climits>
@@ -111,13 +110,6 @@ bool cmp(const int& a, const int& b) {
 //     `----'
 
 
-//      ( (
-//    ( (
-//      ) )
-//    ........
-//    |      |]	  NESCAFÉ
-//    \      /    Salsabeel Musa
-//     `----'
 void solve() {
 
 	
