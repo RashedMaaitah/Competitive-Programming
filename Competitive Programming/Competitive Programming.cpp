@@ -15,6 +15,7 @@
 //////#include<numeric>
 #include <set>                                   
 #include <map>
+#include <unordered_map>
 //#include <chrono>
 //#include <thread>
 //#include <sstream>
@@ -110,10 +111,38 @@ bool cmp(const int& a, const int& b) {
 //     `----'
 
 
+
+int firstUniqChar(string s) {
+	vector <pair<int, int>> vec(26);
+
+	for (int i = 0; i < s.size(); i++) {
+		if (vec[s[i] - 'a'].first == 0) {
+			vec[s[i] - 'a'].first++;
+			vec[s[i] - 'a'].second = i;
+		}
+		else {
+			vec[s[i] - 'a'].first++;
+		}
+	}
+	int index = -1;
+	for (int i = 0; i < 26; i++) {
+		if (vec[i].first == 1) {
+			if (index == -1)
+				index = vec[i].second;
+			else
+				index = min(vec[i].second, index);
+		}
+	}
+
+	return index;
+}
+
 void solve() {
 
-	
-
+	cout << firstUniqChar("loveleetcode");
+	cout << firstUniqChar("leetcode");
+	cout << firstUniqChar("abab");
+	cout << firstUniqChar("a");
 }
 
 
