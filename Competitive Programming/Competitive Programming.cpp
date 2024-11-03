@@ -2,6 +2,7 @@
 #include<vector>
 #include<string> // to_string() a function to convert to a num to a string !!
 #include<climits>
+#include <numeric>
 #include<cstdio>
 //#include<iomanip>
 #include<cmath>
@@ -12,8 +13,8 @@
 #include<algorithm>  //sort .. lower and upper bounds
 ////#include<utility>
 // //#include<memory>
-//////#include<numeric>
-#include <set>                                   
+#include <set>              
+#include <unordered_set>
 #include <map>
 #include <unordered_map>
 //#include <chrono>
@@ -24,10 +25,11 @@
 //#include<queue>
 #include<stack>
 #include <queue>
+#include "Competitive Programming.h"
 //#include<iomanip>
 using namespace std;
 #define PB push_back
-#define Soso ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#define Roro ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define Skip continue
 
 
@@ -106,57 +108,39 @@ bool cmp(const int& a, const int& b) {
 //    ( (
 //      ) )
 //    ........
-//    |      |]	  NESCAFÉ
-//    \      /    Rashed Maaitah
+//    |      |]	  G`O`O`D` D`A`Y`
+//    \      /    Rashed Al Maaitah
 //     `----'
 
 
 
-int firstUniqChar(string s) {
-	vector <pair<int, int>> vec(26);
 
-	for (int i = 0; i < s.size(); i++) {
-		if (vec[s[i] - 'a'].first == 0) {
-			vec[s[i] - 'a'].first++;
-			vec[s[i] - 'a'].second = i;
-		}
-		else {
-			vec[s[i] - 'a'].first++;
-		}
-	}
-	int index = -1;
-	for (int i = 0; i < 26; i++) {
-		if (vec[i].first == 1) {
-			if (index == -1)
-				index = vec[i].second;
-			else
-				index = min(vec[i].second, index);
-		}
-	}
+int fun1(int n) {
+	
+	int sum = 0; // 1
 
-	return index;
+	return fun1(n - 1); // T(n-1)
 }
+
+
+
+
+
+
 
 void solve() {
 
-	cout << firstUniqChar("loveleetcode");
-	cout << firstUniqChar("leetcode");
-	cout << firstUniqChar("abab");
-	cout << firstUniqChar("a");
 }
-
-
-
-
 int main() {
 
 
-	Soso;
+	Roro;
 	int t = 1;
 	//cin >> t;
 	while (t--)
 	{
 		solve();
+		//solve1();
 	}
 
 	//std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // to flush the cin
